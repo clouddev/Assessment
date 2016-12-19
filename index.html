@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Login
+		</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body>
+		<h1>Demo Assessment Application</h1>
+		<div id="Login">
+			<span>Login</span>
+			<input id="txtLogin" type="text"></input>
+			<br/>
+			<br/>
+			<span>Password</span>
+			<input id="txtPwd" type="password" ></input>
+			<br/>
+			<br/>
+			<span id="errorMsg">Login Id and password do not match.</span>
+			<br/>
+			<br/>
+			<button onclick="validateLogin()">Login</button>
+			<button onclick="resetFields()">Reset</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+			$('#errorMsg').hide();
+		    $('input:text, input:password').focus(
+		    function(){
+		        $(this).css({'background-color' : '#FFFFEE'});
+		        $('#errorMsg').hide();
+    		});
+		
+		 	$('input:text, input:password').blur(
+		    function(){
+		        $(this).css({'background-color' : ''});
+		    });
+		});
+
+		function validateLogin()
+		{
+			if(txtLogin.value == txtPwd.value)
+			{
+				//alert("login successfull");
+				window.location.replace("test.html");
+			}
+			else
+			{
+				$('#errorMsg').show();
+			}
+		}
+
+		function resetFields()
+		{
+			document.getElementById('txtLogin').value = "";
+			document.getElementById('txtPwd').value = "";
+		}
+	</script>
+</html>

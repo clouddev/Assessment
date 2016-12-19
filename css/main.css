@@ -1,0 +1,40 @@
+html, body {
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.question {
+	font-size: 20px;
+}
+
+.answer {
+	font-size: 15px;
+}
+
+#instruction {
+	color: grey;
+}	
+
+.asterix {
+	color: red;
+}
+
+#quiz, #Login, h1, #thankYou {
+	margin: 0 auto;
+	width: 60%;
+}
+
+#btnNext {
+	float: right;
+
+}
+
+button {
+	font-size: 12px;
+	background-color: blue;
+	color: yellow;	
+}
+
+h1{
+	padding-bottom: 20px;
+}
